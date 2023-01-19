@@ -6,7 +6,6 @@ const Users = require('../Models/User')
 class LoginController{
     async Login(req,res) {
         const {username,password} = req.body
-        console.log(req.body)
     const user = await Users.findOne({userName:username})
         if(user===null){
             return res.status(400).json({

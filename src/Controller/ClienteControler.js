@@ -15,7 +15,6 @@ class ClienteController {
         try {
             await schema.validate(req.body)
         } catch (err) {
-            console.log(err.errors)
             return res.status(400).json(err.message)
         }
 
@@ -46,7 +45,6 @@ class ClienteController {
     //busca todos os clientes
     async list(req, res) {
         const {page} = req.params
-        console.log(page)
         const limit = 6
         var lastPage = 1
 
@@ -74,7 +72,6 @@ class ClienteController {
 
     }
     async consult(req, res) {
-        console.log("oi cheguei aqui")
         const { _id } = req.params
         try {
             const cliente = await Clientes.findById({ _id })

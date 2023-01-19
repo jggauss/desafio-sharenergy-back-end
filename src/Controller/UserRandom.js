@@ -19,9 +19,6 @@ class UserRandom {
                 idade :dado.dob.age
 
              }
-             console.log("olha os dados aqui")
-             console.log(usuario)
-             
              criarUsuario(usuario)
             return res.json(response.data)
         })

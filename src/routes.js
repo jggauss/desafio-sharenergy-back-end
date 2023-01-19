@@ -17,7 +17,7 @@ const routes = Router()
 routes.get('/user',ValidarToken,UserController.consult)
 
 //criar usuário
-routes.post('/user',ValidarToken,UserController.create)
+routes.post('/user',UserController.create)
 
 //Busca pesquisa e faz paginação usuários
 routes.get('/users/:page/:pesquisa',ValidarToken,UserController.search)

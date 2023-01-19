@@ -2,7 +2,6 @@ const apiHTTPCats = require('../../ConfigApi/ConfigApiHttpCats')
 class Status {
     async buscaStatus(req,res){
         const {status} = req.params
-        console.log(status)
         await apiHTTPCats.get('/'+102+".jpg")
         .then((response)=>{
             return response

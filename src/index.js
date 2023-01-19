@@ -2,4 +2,4 @@ const app = require('./app')
 const Loaders = require('./database/index')
 
 Loaders.start()
-app.listen(8082,() => console.log("Servidor rodando na porta 8082"))
+app.listen(process.env.PORT,() => console.log("Servidor rodando na porta : "+process.env.PORT))

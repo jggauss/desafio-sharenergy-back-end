@@ -1,0 +1,35 @@
+{
+  "name": "sharenergy-back-end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./src/index.js",
+  "dev":"nodemon ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jggauss/desafio-sharenergy-back-end.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jggauss/desafio-sharenergy-back-end/issues"
+  },
+  "homepage": "https://github.com/jggauss/desafio-sharenergy-back-end#readme",
+  "dependencies": {
+    "axios": "^1.2.3",
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^6.8.4",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^2.0.20",
+    "yup": "^0.32.11"
+  }
+}
