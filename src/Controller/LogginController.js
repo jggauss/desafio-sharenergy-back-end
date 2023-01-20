@@ -20,7 +20,7 @@ class LoginController{
             )
     }
        
-    const token = jwt.sign({userName:user.userName},process.env.SECRET,{expiresIn:'1d'})
+    const token = jwt.sign({userName:user.userName},">7vc!q_%",{expiresIn:'1d'})
     return res.json({
         erro:false,
         message:'Login efetuado com sucesso',

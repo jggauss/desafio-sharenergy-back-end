@@ -24,3 +24,7 @@ npm i cors
 
 ### gerenciador de arquivos de imagens
 npm install multer
+
+### enviar email
+Nodemailer
+npm i nodemailer

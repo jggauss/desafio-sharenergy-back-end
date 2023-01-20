@@ -15,10 +15,12 @@ class UserRandom {
                 email:dado.email,
                 userName: dado.login.username,
                 foto:dado.picture.medium,
-                password : '$2b$10$uceV86k0Ag1jDMmPU/NwzeRUjOIA6BWCJ0lqLbYpyMng.SY9WcOJW',
-                idade :dado.dob.age
+                password : "$2b$10$QMTJkjIm9DAFkzf7G4t5qeth.2JEYacMmp1t7sStKhZCZz28qz68e",
+                idade :Math.floor(((new Date()-new Date(dado.dob.date))/ (1000 * 60 * 60 * 24))/360),
+                dataNascimento:dado.dob.date
 
              }
+             console.log(usuario)
              criarUsuario(usuario)
             return res.json(response.data)
         })
@@ -32,7 +34,7 @@ class UserRandom {
 async function criarUsuario (dados) {
     
     try {
-        await Users.create({name: dados.name,email:dados.email,userName:dados.userName, foto:dados.foto,password: dados.password,picture:dados.picture,idade:dados.idade})    
+        await Users.create({name: dados.name,email:dados.email,userName:dados.userName, foto:dados.foto,password: dados.password,picture:dados.picture,idade:dados.idade,dataNascimento:dados.dataNascimento})    
     } catch (error) {
         console.log(error)
     }

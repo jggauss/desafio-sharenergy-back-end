@@ -33,6 +33,9 @@ const UserSchema = new Schema({
         type: String,
        
     },
+    dataNascimento:{
+        type: Date,
+    },
     status:{
         type:String,
     },

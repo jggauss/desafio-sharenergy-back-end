@@ -15,7 +15,7 @@ class ValidarToken{
     }
 
     try {
-        const decoded = await promisify(jwt.verify)(token,process.env.SECRET)
+        const decoded = await promisify(jwt.verify)(token,">7vc!q_%")
         req.userName = decoded.userName
         return next()
     } catch (error) {

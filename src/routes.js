@@ -22,9 +22,16 @@ routes.post('/user',UserController.create)
 //Busca pesquisa e faz paginação usuários
 routes.get('/users/:page/:pesquisa',ValidarToken,UserController.search)
 routes.get('/users/:page',ValidarToken,UserController.list)
-
+//deleta todos usuarios
+routes.delete('/users',ValidarToken,UserController.deletaTodos)
 //rota para criar usuários pelo insomnia
 routes.get('/usersrandom',ValidarToken, UserRandom.list)
+
+//recuperar senha
+routes.post('/recover-password',ValidarToken,UserController.recoverPassword)
+
+
+
 //busca imagem ao cadastrar usuário
 routes.post('/image/:id',addImage.single('image'),ImageController.create)
 
